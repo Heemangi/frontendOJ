@@ -12,7 +12,7 @@ const Leaderboard = () => {
 
     const fetchLeaderboardData = async () => {
         try {
-            const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/submissions/leaderboard/?problem_id=${problemId}`, {
+            const response = await fetch(`https://backendoj-x6dl.onrender.com/api/submissions/leaderboard/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`

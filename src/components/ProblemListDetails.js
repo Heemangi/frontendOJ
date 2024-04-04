@@ -9,7 +9,7 @@ const ProblemListDetails = ({ problem }) => {
   const [error, setError] = useState(null);
 
   const handleClick = async () => {
-    const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/problems/?id=${problem._id}`, {
+    const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems/?id=${problem._id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${user.token}`,
@@ -36,7 +36,7 @@ const ProblemListDetails = ({ problem }) => {
 
   return (
     <div className="problem-details">
-      <Link to={`${process.env.REACT_BACKEND_URL}/problems/${problem._id}`} className='head'>
+      <Link to={`https://backendoj-x6dl.onrender.com/problems/${problem._id}`} className='head'>
         <h4>{problem.title}</h4>
       </Link>
       <p>
@@ -61,6 +61,6 @@ const ProblemListDetails = ({ problem }) => {
 
 
 <div className="button-container">
-  <Link to={`${process.env.REACT_BACKEND_URL}/problem-form`} className="button-link">Add a New Problem</Link>
+  <Link to={`https://backendoj-x6dl.onrender.com/problem-form`} className="button-link">Add a New Problem</Link>
 </div>
 export default ProblemListDetails;

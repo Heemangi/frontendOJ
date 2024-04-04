@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProblems = async () => {
-      const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/problems`, {
+      const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -35,7 +35,7 @@ const Home = () => {
         ))}
       </div>
       <div className="button-container">
-        <Link to={`${process.env.REACT_BACKEND_URL}/problem-form`} className="button-link">Add a New Problem</Link>
+        <Link to={`https://backendoj-x6dl.onrender.com/problem-form`} className="button-link">Add a New Problem</Link>
     </div>
 
       </div>
