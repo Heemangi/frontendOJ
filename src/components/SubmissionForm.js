@@ -89,8 +89,8 @@ const SubmissionForm = ({ problemId }) => {
           <b>Enter your code</b>
         </label>
         <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-          <option value="java">Java</option>
           <option value="py">Python</option>
+          <option value="java">Java</option>
           <option value="cpp">C ++ </option>
         </select>
       </div>
