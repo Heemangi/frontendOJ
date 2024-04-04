@@ -48,7 +48,7 @@ const ProblemForm = () => {
         }
 
         const problem = {title, description, test_cases: testCases, tag, difficulty}
-        const response = await fetch('/api/problems', {
+        const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/problems`, {
             method: 'POST',
             body: JSON.stringify(problem),
             headers: {

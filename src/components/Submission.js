@@ -14,7 +14,7 @@ const Submission = () => {
 
     const fetchProblemSubmissionData = async () => {
         try {
-            const response = await fetch(`/api/submissions/?problem_id=${problemId}`, {
+            const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/submissions/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`

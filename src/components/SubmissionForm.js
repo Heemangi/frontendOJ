@@ -21,7 +21,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, input };
-    const response = await fetch("/api/code/run", {
+    const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/code/run`, {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -56,7 +56,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, problem_id: problemId };
-    const response = await fetch("/api/code/submit", {
+    const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/code/submit`, {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {

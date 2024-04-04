@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <header>    
             <div className="container">   
-                <Link to='/'>  
+                <Link to={`${process.env.REACT_BACKEND_URL}/`}>  
                     <h1>SolveX - The Online Judge</h1>
                 </Link>
 

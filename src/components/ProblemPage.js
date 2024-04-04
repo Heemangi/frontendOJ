@@ -10,7 +10,7 @@ const ProblemPage = () => {
     const [activeTab, setActiveTab] = useState("description");
 
     const fetchProblemData = async () => {
-        const response = await fetch('/api/problems/' + problemId, {
+        const response = await fetch(`${process.env.REACT_BACKEND_URL}/api/problems/` + problemId, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -67,13 +67,13 @@ const ProblemPage = () => {
                             </div>
                         )}
                         {activeTab === "submissions" && (
-                         <Link to={`/problems/${problemId}/submissions`} className="link-button">
+                         <Link to={`${process.env.REACT_BACKEND_URL}/problems/${problemId}/submissions`} className="link-button">
                           Submissions
                         </Link> 
                         )}
 
                         {activeTab === "leaderboard" && (
-                            <Link to={`/problems/${problemId}/leaderboard`} className="link-button">
+                            <Link to={`${process.env.REACT_BACKEND_URL}/problems/${problemId}/leaderboard`} className="link-button">
                             View Leaderboard
                             </Link>
                         )}
