@@ -35,7 +35,7 @@ const Home = () => {
         ))}
       </div>
       <div className="button-container">
-        <Link to={`https://backendoj-x6dl.onrender.com/problem-form`} className="button-link">Add a New Problem</Link>
+        <Link to='/problem-form' className="button-link">Add a New Problem</Link>
     </div>
 
       </div>

@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <header>    
             <div className="container">   
-                <Link to={`https://backendoj-x6dl.onrender.com/`}>  
+                <Link to='/'>  
                     <h1>SolveX - The Online Judge</h1>
                 </Link>
 

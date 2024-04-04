@@ -36,7 +36,7 @@ const ProblemListDetails = ({ problem }) => {
 
   return (
     <div className="problem-details">
-      <Link to={`https://backendoj-x6dl.onrender.com/problems/${problem._id}`} className='head'>
+      <Link to={`/problems/${problem._id}`} className='head'>
         <h4>{problem.title}</h4>
       </Link>
       <p>
@@ -61,6 +61,6 @@ const ProblemListDetails = ({ problem }) => {
 
 
 <div className="button-container">
-  <Link to={`https://backendoj-x6dl.onrender.com/problem-form`} className="button-link">Add a New Problem</Link>
+  <Link to="/problem-form" className="button-link">Add a New Problem</Link>
 </div>
 export default ProblemListDetails;

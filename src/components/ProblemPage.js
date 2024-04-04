@@ -67,13 +67,13 @@ const ProblemPage = () => {
                             </div>
                         )}
                         {activeTab === "submissions" && (
-                         <Link to={`https://backendoj-x6dl.onrender.com/problems/${problemId}/submissions`} className="link-button">
+                         <Link to={`/problems/${problemId}/submissions`} className="link-button">
                           Submissions
                         </Link> 
                         )}
 
                         {activeTab === "leaderboard" && (
-                            <Link to={`https://backendoj-x6dl.onrender.com/problems/${problemId}/leaderboard`} className="link-button">
+                            <Link to={`/problems/${problemId}/leaderboard`} className="link-button">
                             View Leaderboard
                             </Link>
                         )}
