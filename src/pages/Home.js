@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProblems = async () => {
-      const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems`, {
+      const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/problems`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

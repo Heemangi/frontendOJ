@@ -9,7 +9,7 @@ const ProblemListDetails = ({ problem }) => {
   const [error, setError] = useState(null);
 
   const handleClick = async () => {
-    const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems/?id=${problem._id}`, {
+    const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/problems/?id=${problem._id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${user.token}`,

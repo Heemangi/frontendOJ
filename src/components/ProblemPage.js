@@ -10,7 +10,7 @@ const ProblemPage = () => {
     const [activeTab, setActiveTab] = useState("description");
 
     const fetchProblemData = async () => {
-        const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems/` + problemId, {
+        const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/problems/` + problemId, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${user.token}`

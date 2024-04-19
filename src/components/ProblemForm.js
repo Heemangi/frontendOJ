@@ -48,7 +48,7 @@ const ProblemForm = () => {
         }
 
         const problem = {title, description, test_cases: testCases, tag, difficulty}
-        const response = await fetch(`https://backendoj-x6dl.onrender.com/api/problems`, {
+        const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/problems`, {
             method: 'POST',
             body: JSON.stringify(problem),
             headers: {

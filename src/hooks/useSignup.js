@@ -9,7 +9,7 @@ export const useSignup = () => {
     const signup = async (email, password, username) => {
         setIsloading(true)
         setError(null)
-        const response = await fetch(`https://backendoj-x6dl.onrender.com/api/users/signup`, {
+        const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/users/signup`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password, username})

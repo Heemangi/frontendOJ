@@ -14,7 +14,7 @@ const Submission = () => {
 
     const fetchProblemSubmissionData = async () => {
         try {
-            const response = await fetch(`https://backendoj-x6dl.onrender.com/api/submissions/?problem_id=${problemId}`, {
+            const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/submissions/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`
