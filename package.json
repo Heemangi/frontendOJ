@@ -1,5 +1,5 @@
 {
-  "proxy": "https://backendoj-x6dl.onrender.com",
+  "proxy": "https://onlinejudge-tagname.onrender.com/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
