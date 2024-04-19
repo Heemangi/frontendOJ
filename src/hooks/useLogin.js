@@ -17,7 +17,6 @@ export const useLogin = () => {
         })
         const json = await response.json()
 
-        // json contains ok property
         if (!response.ok){
             setIsloading(false)
             setError(json.error)
