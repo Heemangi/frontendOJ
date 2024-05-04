@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-
 const SubmissionForm = ({ problemId }) => {
   const { user } = useAuthContext();
   const [language, setLanguage] = useState("java");
@@ -21,7 +20,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, input };
-    const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/code/run`, {
+    const response = await fetch("/api/code/run", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -56,7 +55,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, problem_id: problemId };
-    const response = await fetch(`https://onlinejudge-tagname.onrender.com/api/code/submit`, {
+    const response = await fetch("/api/code/submit", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -89,31 +88,30 @@ const SubmissionForm = ({ problemId }) => {
           <b>Enter your code</b>
         </label>
         <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-          <option value="py">Python</option>
           <option value="java">Java</option>
+          <option value="py">Python</option>
           <option value="cpp">C ++ </option>
         </select>
       </div>
       <textarea
-  rows="15"
-  cols="60"
-  value={code}
-  onChange={(e) => setCode(e.target.value)}
-  className={emptyFields.includes("code") ? "error" : ""}
-  style={{ color: "black", width: 700, height: 350, border: "1px solid black" }}
-/>
-
+        rows="15"
+        cols="60"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        className={emptyFields.includes("code") ? "error" : ""}
+        // style={{ color: "black", width: 700, height: 350, border: "1px solid black" }}
+      />
 
       <label>
         <b>Enter input here</b>
       </label>
-      <textarea 
+      <textarea
         rows="5"
         cols="60"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className={emptyFields.includes("input") ? "error" : ""}
-        style={{ width: 700 }}
+        className={`input-textarea emptyFields.includes("input") ? "error" : ""`}
+        // style={{ width: 700 }}
       />
       <div className="button-container">
         <button type="button" onClick={runCode} className="small-button">
@@ -136,9 +134,9 @@ const SubmissionForm = ({ problemId }) => {
         <div>
           <label>Submission</label>
           <div className={submission.verdict === "failed" ? "error" : "output"}>
-            <p>Verdict -  {submission.verdict}</p>
+            <p>Verdict - {submission.verdict}</p>
             <p>Total Test Cases - {submission.totalTestCases}</p>
-            <p>Test Cases Passed -  {submission.testCasesPassed}</p>
+            <p>Test Cases Passed - {submission.testCasesPassed}</p>
           </div>
         </div>
       )}

@@ -77,6 +77,19 @@ header a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1500px) {
+  .user-info span, .user-info a {
+      display: none;
+  }
+
+  .container h1{
+    font-size: 22px;
+  }
+
+  .user-info button{
+    margin-top: -10px;
+  }
+}
 
 .problem-details {
   /* background: rgb(237, 238, 238); */
@@ -151,22 +164,21 @@ header a {
   overflow-wrap: normal;
   overflow-x: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  height: 120%;
 }
 
-.problem-section {
+
+/* .problem-section {
   background-color: white; 
   color: black; 
   padding: 20px;
   border-radius: 5px;
   border-color: black;
-  width: 40%;
+  width: 100%;
   border-width: medium;
   border-style: solid;
- 
-}
+} */
 
 .problem-section h2 {
   font-size: 30px;
@@ -235,6 +247,12 @@ header a {
   cursor: pointer;
   font-weight: bold;
   border-bottom: 2px solid transparent;
+}
+
+@media screen and (max-width: 900px) {
+  .tab-button {
+    padding: 10px 10px;
+  }
 }
 
 .tab-button.active {
@@ -308,11 +326,67 @@ header a {
 }
 
 
-.problem-section {
+.problem-page .problem-section {
   background-color: #fff;
   color: #000;
-  width: 40%;
+  width: 40%; 
+  
 }
+
+@media screen and (max-width: 900px) {
+  .problem-page .problem-section {
+    width: 100%; 
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    height: 100%;
+  }
+}
+
+.compile textarea {
+  color: black;
+  width: 800px;
+  height: 350px;
+  border: 1px solid black;
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 900px) {
+  .compile {
+    flex-direction: column;
+    font-size: 18px; 
+    padding: 10px;
+    width: 95%;
+    /* width: 100%; */
+    /* padding: 30px; */
+}
+
+  .compile textarea {
+    width: 95%;  
+    
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .compile {
+    flex-direction: column;
+    font-size: 18px; 
+    padding: 10px;
+    width: 93%;
+    /* width: 100%; */
+    /* padding: 30px; */
+}
+
+  .compile textarea {
+    width: 93%;   
+  }
+}
+
+.input-textarea {
+  width: 100%;
+  height: 180px !important;
+}
+
 
 .problem-section h2 {
   font-size: 24px;
@@ -325,14 +399,24 @@ header a {
 }
 
 .compile{
-  padding: 10px;
+  padding: 20px;
   border: 1px solid black;
   border-width: medium;
+  font-size: 18px; 
   /* background-color:  rgba(81, 178, 92, 0.745); */
   background:  rgba(130, 201, 130, 0.5);
   color: white;
-  
+  /* flex-grow: 1;
+  margin-top: 20px; */
 }
+
+@media screen and (min-width: 900px) {
+  .problem-page {
+    flex-direction: row;
+    /* width: 150%; */
+  }
+}
+
 
 .problem-section,
 .submission-section {
@@ -483,10 +567,6 @@ form.signup, form.login {
   text-decoration: none;
 }
 
-.compile {
-  font-size: 18px; 
-  margin: 0;
-}
 
 div.output {
   padding: 5px;
